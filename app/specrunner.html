@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Mubaloo JavaScript Assignment</title>
+
+  <link rel="stylesheet" href="vendor/jasmine.css">
+</head>
+
+<body>
+  <div id="sandbox" style:"overflow: hidden; visibility: hidden; height: 1px;"></div>
+  
+  <!-- Testing libs -->
+  <script src="vendor/jasmine.js"></script>
+  <script src="vendor/jasmine-html.js"></script>
+  
+  <!-- Load application -->
+  <script src="vendor/require.js"></script>
+
+  <!-- Declare your spec files to be run here -->
+  <script>
+    require({ baseUrl: 'app' }, [
+      'spec'
+    ], function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var htmlReporter = new jasmine.HtmlReporter();
+
+      jasmineEnv.addReporter(htmlReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return htmlReporter.specFilter(spec);
+      };
+
+      jasmineEnv.execute();
+    });
+  </script>
+</body>
+</html>
