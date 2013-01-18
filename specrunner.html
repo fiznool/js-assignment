@@ -13,17 +13,28 @@
 <body>
   <div id="sandbox" style:"overflow: hidden; visibility: hidden; height: 1px;"></div>
   
-  <!-- Testing libs -->
+  <script src="vendor/jquery.js"></script>
   <script src="vendor/jasmine.js"></script>
   <script src="vendor/jasmine-html.js"></script>
+  <script src="vendor/jasmine-jquery.js"></script>
+  <script src="vendor/jasmine.async.js"></script>
   
   <!-- Load application -->
   <script src="vendor/require.js"></script>
 
   <!-- Declare your spec files to be run here -->
   <script>
-    require([
-      'spec/main.spec'
+    require({paths: { jquery: 'vendor/jquery'} }, [
+      'spec/01-logicalops.spec',
+      'spec/02-flowcontrol.spec',
+      'spec/03-arrays.spec',
+      'spec/04-bestpractices.spec',
+      'spec/05-objects.spec',
+      'spec/06-functions.spec',
+      'spec/07-regex.spec',
+      'spec/08-jquery.spec',
+      'spec/09-passwordstrength.spec',
+      
     ], function() {
       var jasmineEnv = jasmine.getEnv();
       jasmineEnv.updateInterval = 1000;
