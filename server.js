@@ -10,14 +10,15 @@ module.exports = function(opts) {
   opts.baseDir = opts.baseDir || './';
   
   site.configure(function() {
-    [ 'app', 'data', 'vendor' ].forEach(function(dir) {
+    [ 'app', 'data', 'spec', 'vendor' ].forEach(function(dir) {
       site.use('/' + dir, staticDir(opts.baseDir + dir));
     });
+
     site.use(express.bodyParser());
   });
 
   site.get("/", function(req, res) {
-    fs.createReadStream(opts.baseDir + 'app/specrunner.html').pipe(res);
+    fs.createReadStream(opts.baseDir + 'specrunner.html').pipe(res);
   });
 
   site.listen(opts.port);

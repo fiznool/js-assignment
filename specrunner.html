@@ -22,8 +22,8 @@
 
   <!-- Declare your spec files to be run here -->
   <script>
-    require({ baseUrl: 'app' }, [
-      'spec'
+    require([
+      'spec/main.spec'
     ], function() {
       var jasmineEnv = jasmine.getEnv();
       jasmineEnv.updateInterval = 1000;
