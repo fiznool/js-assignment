@@ -22,20 +22,19 @@ This should begin a local development server, which can be viewed at `http://loc
 
 ### Test Cases
 
-The tests are powered by [Jasmine](http://pivotal.github.com/jasmine/), a Test-Driven Development (TDD) framework. The individual tests are contained in `spec/main.spec.js`, which is testing the `app/main.js` file.
+The tests are powered by [Jasmine](http://pivotal.github.com/jasmine/), a Test-Driven Development (TDD) framework. The individual tests are contained in the files in the `spec/` directory, each of which test the corresponding module in the `app/` directory.
 
-The first time you browse to `http://localhost:4444` you should see a bunch of failing tests. To make these tests pass, you need to implement the functions in `app/main.js`. This is the ethos of TDD: write tests, run tests, watch them fail, write code to pass tests.
+The first time you browse to `http://localhost:4444` you should see a bunch of failing tests. To make these tests pass, you need to implement the functions in `app/`. This is the ethos of TDD: write tests, run tests, watch them fail, write code to pass tests.
 
-Each time you implement a function in `app/main.js`, reload the browser window to see if the test is now passing. You may need to refer to `spec/main.spec.js` to view extra instructions on how to implement the functions to make the tests pass.
+Each time you implement a function in a module in `app/`, reload the browser window to see if the test is now passing. You may need to refer to the tests in `spec/` to view extra instructions on how to implement the functions to make the tests pass.
 
 If you don't like web browsers, you can run the tests from the command line:
-  
+
     npm test
 
 ### Data-driven tests
 
-If your tests need data that can be fetched via XHR, stick a `.json` file in
-the `data` directory; you can access it at `/data/<filename>.json`.
+There is one data driven test - the JSON data for this can be found in the `data/` directory.
 
 ## I've found the answers to the tests online!
 
