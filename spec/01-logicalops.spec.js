@@ -4,6 +4,12 @@ define([
 
   describe('Logical operators:', function() {
 
+    it('you should be able to work with logical not', function() {
+      expect(answers.not(false)).toBeTruthy();
+      expect(answers.not(true)).toBeFalsy();
+      expect(answers.not(undefined)).toBeTruthy();
+    });
+
     it('you should be able to work with logical and', function() {
       expect(answers.and(false, false)).toBeFalsy();
       expect(answers.and(true, false)).toBeFalsy();

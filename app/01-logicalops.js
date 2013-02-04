@@ -1,6 +1,11 @@
 define(function() {
 
   return {
+
+    not: function(a) {
+
+    },
+
     and : function(a, b) {
 
     },
@@ -8,6 +13,6 @@ define(function() {
     or : function(a, b) {
 
     }
-    
+
   };
 });
