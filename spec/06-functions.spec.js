@@ -16,33 +16,6 @@ define([
       expect(answers.useArguments(a, b, c, d)).toBe(a + b + c + d);
     });
 
-    it('you should be able to create a partial function', function() {
-      var fcn = answers.partial('Hello');
-      expect(fcn('World')).toBe('Hello, World');
-      expect(fcn('Everybody!')).toBe('Hello, Everybody!');
-    });
-
-    it('you should be able to change the context in which a function is called', function() {
-      var sayItCalled = false;
-      var sayIt = function(greeting, name, punctuation) {
-        sayItCalled = true;
-        return greeting + ', ' + name + (punctuation || '!');
-      };
-
-      var speak = function() {
-          return sayIt(this.greeting, this.name, '!!!');
-        };
-
-      var obj = {
-        greeting : 'Hello',
-        name : 'Georgina'
-      };
-
-      var result = answers.speak(speak, obj);
-      expect(result).toBe('Hello, Georgina!!!');
-      expect(sayItCalled).toBeTruthy();
-    });
-
     it('you should be able to create a function that returns a module', function() {
       var module = answers.createModule('hello', 'matt');
 

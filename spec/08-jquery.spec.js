@@ -59,30 +59,6 @@ define([
       });
     });
 
-    async.it('you should be able to use promises', function(done) {
-      var flag = false;
-      var finished = 0;
-      var total = 2;
-
-      function finish() {
-        if (++finished === total) { done(); }
-      }
-
-      answers.async(true).then(function(result) {
-        flag = result;
-        expect(flag).toBe(true);
-        finish();
-      });
-
-      answers.async('success').then(function(result) {
-        flag = result;
-        expect(flag).toBe('success');
-        finish();
-      });
-
-      expect(flag).toBe(false);
-    });
-
   });
   
 });
