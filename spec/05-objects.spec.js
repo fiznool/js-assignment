@@ -1,7 +1,7 @@
 define([
   'app/05-objects'
 ], function(answers) {
-  
+
   describe('Objects:', function() {
     var F;
 
@@ -52,7 +52,7 @@ define([
 
       var obj = new F();
 
-      expect(answers.iterate(obj)).toBe([ 'foo: bar', 'baz: bim' ]);
+      expect(answers.iterate(obj)).toEqual([ 'foo: bar', 'baz: bim' ]);
     });
   });
 

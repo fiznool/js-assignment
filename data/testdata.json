@@ -1,9 +1,1 @@
-{
-  "people" : [
-    { "name" : "Andrew" },
-    { "name" : "Betty" },
-    { "name" : "Charles" },
-    { "name" : "Debbie" },
-    { "name" : "Edward" }
-  ]
-}
+[ "Andrew", "Betty", "Charles", "Debbie", "Edward" ]
