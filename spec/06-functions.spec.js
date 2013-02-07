@@ -1,7 +1,7 @@
 define([
   'app/06-functions'
 ], function(answers) {
-  
+
   describe('Functions:', function() {
 
     it('you should be able to use arguments', function () {
@@ -44,7 +44,7 @@ define([
     });
 
     it('you should be able to create a function that returns a module', function() {
-      var module = answers.createModule('hello', 'matt');
+      var module = answers.createModule('Hello', 'Harry');
 
       expect(typeof module.sayIt).toBe('function');
       expect(module.name).toBe('Harry');
