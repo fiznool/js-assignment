@@ -22,7 +22,7 @@ This should begin a local development server, which can be viewed at `http://loc
 
 ### Test Cases
 
-The tests are powered by [Jasmine](http://pivotal.github.com/jasmine/), a Test-Driven Development (TDD) framework. The individual tests are contained in the files in the `spec/` directory, each of which test the corresponding module in the `app/` directory.
+The tests are powered by [Jasmine](https://jasmine.github.io/), a Test-Driven Development (TDD) framework. The individual tests are contained in the files in the `spec/` directory, each of which test the corresponding module in the `app/` directory.
 
 The first time you browse to `http://localhost:4444` you should see a bunch of failing tests. To make these tests pass, you need to implement the functions in `app/`. This is the ethos of TDD: write tests, run tests, watch them fail, write code to pass tests.
 
